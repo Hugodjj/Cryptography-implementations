@@ -1,7 +1,3 @@
-from KSA import KSA
-from PRGA import PRGA
-
-
 class RC4:
     def __init__(self, key,data):
         self.key = key
