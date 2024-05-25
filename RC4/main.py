@@ -23,13 +23,13 @@ def main():
     text_bytes = string_to_bytes(text)
 
     # Encrypting
-    cipher_text_bytes = RC4.RC4(key_bytes, text_bytes)
+    cipher_text_bytes = RC4(key_bytes, text_bytes)
     ciphertext = bytes_to_string(cipher_text_bytes)
     createfile("RC4_Cipher_Text.txt",ciphertext)
 
     # Decrypting
-    decrypted_text_bytes = RC4.RC4(key_bytes, cipher_text_bytes)
+    decrypted_text_bytes = RC4(key_bytes, cipher_text_bytes)
     decrypted_text = bytes_to_string(decrypted_text_bytes)
     createfile("RC4_Decrypted_Text.txt",decrypted_text)
-    
-main()
+
+main() 
